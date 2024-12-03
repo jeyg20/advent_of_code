@@ -11,7 +11,6 @@ The repository is organized by year and day for easy navigation:
 AdventOfCode/
 ├── README.md
 ├── 2024/
-├── 2024/
 │   ├── Day01/
 │   └── ...
 ```

@@ -32,5 +32,5 @@ if __name__ == "__main__":
                     total_similarity_score += b
 
     print(
-        f"Total distace: {total_distance}\nTotal similarity score: {total_similarity_score}"
+        f"Total distance: {total_distance}\nTotal similarity score: {total_similarity_score}"
     )

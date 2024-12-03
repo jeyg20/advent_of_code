@@ -2,10 +2,6 @@ def calculate_distance(a, b) -> int:
     return abs(a - b)
 
 
-def calculate_similarity_score(a, b) -> int:
-    return 1
-
-
 if __name__ == "__main__":
 
     column_a_index = 0

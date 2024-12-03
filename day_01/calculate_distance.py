@@ -2,6 +2,10 @@ def calculate_distance(a, b) -> int:
     return abs(a - b)
 
 
+def calculate_similarity_score(a, b) -> int:
+    return 1
+
+
 if __name__ == "__main__":
 
     column_a_index = 0
@@ -25,4 +29,12 @@ if __name__ == "__main__":
         for a, b in zip(column_a, column_b):
             total_distance += calculate_distance(a, b)
 
-        print(total_distance)
+        total_similarity_score = 0
+        for a in column_a:
+            for b in column_b:
+                if a == b:
+                    total_similarity_score += b
+
+    print(
+        f"Total distace: {total_distance}\nTotal similarity score: {total_similarity_score}"
+    )

@@ -7,7 +7,7 @@ if __name__ == "__main__":
     column_a_index = 0
     column_b_index = 1
 
-    with open("day_1_list.txt", "r") as text_file:
+    with open("input.txt", "r") as text_file:
         lines = text_file.readlines()
         column_a = []
         column_b = []

@@ -15,19 +15,19 @@ def calculate_total_safe_reports(levels: list[int]) -> bool:
 
 if __name__ == "__main__":
     with open("input.txt", "r") as input_file:
-        total_safe_reports = 0
+        part_one_safe_reports = 0
+        part_two_safe_reports = 0
         for line in input_file:
             levels = [int(num) for num in line.split()]
             if calculate_total_safe_reports(levels):
-                total_safe_reports += 1
+                part_one_safe_reports += 1
             else:
-                print("Original", levels)
                 for i in range(0, len(levels)):
                     levels_copy = levels[:]
                     levels_copy.pop(i)
-                    print(levels_copy)
                     if calculate_total_safe_reports(levels_copy):
-                        total_safe_reports += 1
+                        part_two_safe_reports += 1
                         break
 
-        print(total_safe_reports)
+        print(part_one_safe_reports)
+        print(part_one_safe_reports + part_two_safe_reports)

@@ -20,5 +20,14 @@ if __name__ == "__main__":
             levels = [int(num) for num in line.split()]
             if calculate_total_safe_reports(levels):
                 total_safe_reports += 1
+            else:
+                print("Original", levels)
+                for i in range(0, len(levels)):
+                    levels_copy = levels[:]
+                    levels_copy.pop(i)
+                    print(levels_copy)
+                    if calculate_total_safe_reports(levels_copy):
+                        total_safe_reports += 1
+                        break
 
         print(total_safe_reports)
